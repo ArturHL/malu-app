@@ -1,0 +1,112 @@
+/* FILEPATH: /home/arturo_gomita/js/maluWebsite/src/components/pages/profile/index.css */
+.profileSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 20px;
+}
+.profile-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card > div {
+  position: relative;
+  width: min-content;
+  height: min-content;
+}
+
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.profile-card span{
+  width: min-content;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.labelEdit{
+  font-size: 12px;
+  color: gray;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.section {
+  margin: 20px 0 20px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 16px;
+}
+.dataSection{
+  max-width: 300px;
+}
+.dataSection p{
+ text-align: left;
+}
+.delivery-address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.address{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 70px;
+}
+
+.payment-method img {
+  width: 60px;
+  height: auto;
+}
+
+.payment-method p {
+  font-size: 14px;
+}

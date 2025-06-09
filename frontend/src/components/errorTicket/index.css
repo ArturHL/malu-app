@@ -1,0 +1,18 @@
+.error {
+  color: white;
+  padding: 6px;
+  margin-bottom: 5px;
+  background-color: rgba(209, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

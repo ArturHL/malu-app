@@ -1,0 +1,282 @@
+.checkOut{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 20px 0;
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100vw;
+  /* max-width: 100vw;
+  overflow: hidden; */
+  top: 0;
+  left: 0;
+  padding-bottom: 100px;
+}
+.timeline{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 310px;
+  width: 90%;
+  border-bottom: 1px solid #000;
+  position: relative;
+  margin: 40px 20px;
+}
+.timeline .step{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 100px;
+  background-color: #fff;
+  position: absolute;
+}
+.timeline .step:first-child{
+  left: 0px;
+}
+.timeline .step:last-child{
+  right: 0px;
+}
+.timeline .step.active{
+  background-color: #000;
+  color: #fff;
+}
+.cartComfirm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 20px 20px 0 20px;
+  border-bottom: 3px solid var(--yellow);
+}
+.cartComfirm .cart{
+  width: 100vw;
+}
+.cart h2{
+  padding: 0 20px;
+}
+.cartItem{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #0000002e;
+  gap: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+.cartItem img{
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cartItem div{
+  max-width: 50%;
+  word-wrap: break-word;
+}
+.cartItem div h3{
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.cartItem div span:last-child{
+  cursor: pointer;
+}
+.ulModifiers{
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #0000002e;
+}
+.cartItem > p{
+  position: absolute;
+  right: 20px;
+  font-weight: 700;
+}
+
+.totalPrice{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  gap: 20px;
+}
+.totalPrice div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.totalPrice div:last-child{
+  border-top: 2px solid #0000002e;
+}
+
+form.giftCode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 20px;
+  border-bottom: 1px solid #0000002e;
+}
+form.giftCode input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+form.giftCode {
+  color: #000;
+}
+form.giftCode button{
+  padding: 10px 20px;
+}
+
+.comfirmarCompra{
+  width: 90%;
+  border-radius: 7px;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+}
+
+/* Shipments Menu */
+
+.shipmentsForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: white;
+  z-index: 1000;
+}
+.adressMenu{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 40px 20px 20px 20px;
+  border-bottom: 1px solid #0000002e;
+  background-color: white;
+  z-index: 1000;
+}
+.menuAdress{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 30px;
+  padding: 20px 20px;
+  border-bottom: 1px solid #0000002e;
+  gap: 20px;
+  position: relative;
+  transition: all 0.4s;
+  transform: translateY(-100%);
+  background-color: var(--white);
+  overflow: hidden;
+}
+.dropMenuAdress{
+  transform: translateY(0);
+}
+.increaseHeight{
+  max-height: 250px;
+}
+.overflow{
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.menuAdress .adress{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  border-bottom: 1px solid #0000002e;
+  padding: 15px 0;
+}
+.adress img{
+  width: auto;
+  height: 35px;
+}
+.deliveryIcon{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 200px;
+}
+
+/* Paying */
+
+.paying{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  background-color: white;
+  z-index: 1000;
+  position: absolute;
+} 
+.paying img{
+  position: relative;
+  top: -200px;
+}
+.succesfullPayment {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px;
+  background-color: white;
+  z-index: 1000;
+  position: absolute;
+  gap: 40px;
+}
+
+/* .succesfullPayment img {
+  position: relative;
+  top: -200px;
+} */
+
+.succesfullPayment p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.succesfullPayment button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--yellow);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}

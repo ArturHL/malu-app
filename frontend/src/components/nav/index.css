@@ -1,0 +1,194 @@
+.nav{
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 3px solid #fcc929;
+  background-color: white;
+}
+.nav svg{
+  width: 30px;
+  height: auto;
+}
+.nav .menuDesktop{
+  display: none;
+}
+.nav .shopMenuSection{
+  width: 80px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  z-index: 110;
+}
+@media screen and (min-width: 768px) {
+  .shopMenuSection{
+    display: none;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+  .nav .menuDesktop{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .nav .menuDesktop ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    overflow: auto;
+    height: auto;
+    padding: 10px;
+  }
+  .nav .menuDesktop ul li{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    transition: all 0.15s ease-in-out;
+    font-family: 'Pacifico', cursive;
+    text-decoration: underline #fcc929;
+  }
+}
+.nav .btnMenuNav{
+  z-index: 110;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.nav .btnMenuNav svg{
+  height: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.nav .btnMenuNav svg path{
+  transform-origin: center;
+  transform: scale(4);
+}
+
+/* Drop Down Menu */
+.dropDownMenu{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.dropDownMenu ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  max-width: 300px;
+}
+.dropDownMenu ul li a{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #fcc929;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.dropDownMenu ul li:hover svg{
+  transform: scale(1.2);
+}
+.dropDownMenu ul li svg{
+  width: 30px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+/* Condicional */
+.drop {
+  transform: translateY(100vh)
+}
+
+.unDrop {
+  transform: translateY(-100vh)
+}
+
+/*  */
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  display: block;
+  border-radius: 6px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+/* HAMBURGER 2 */
+
+.checkbox2:checked+label>.hamburger2>.bar1 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox2:checked+label>.hamburger2>.bar2 {
+  transform: rotate(45deg);
+}
+
+.checkbox2:checked+label>.hamburger2>.bar3 {
+  transform: rotate(-45deg);
+}
+
+.checkbox2:checked+label>.hamburger2>.bar4 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}

@@ -1,0 +1,157 @@
+.backGroundMenu{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+.productDescriptionMenu{
+  background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  z-index: 30;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.productController{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.productController button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid black;
+  background-color: transparent;
+}
+.productDescriptionMenu .section1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.productDescriptionMenu .formDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+.productDescriptionMenu .formDescription > div{
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 90%;
+  width: 100%;
+  font-size: 18px;
+}
+.productDescriptionMenu .productIndividualTitle{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.errorMenuFormDescription{
+  font-size: 12px;
+  height: min-content;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+.productIndividualTitle span{
+  transition: all 0.25s ease;
+  rotate: 180deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+.productDescriptionMenu .section2{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+}
+.productDescriptionMenu .section2 .error{
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.productDescriptionMenu .section2 ul{
+  width: 100%;
+}
+.productDescriptionMenu .section2 ul li{
+  list-style: none;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.productDescriptionMenu .section2 ul li input{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 25%;
+  padding: 0;
+  border: 1px solid black;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.productDescriptionMenu .section2 ul li input:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background-color: var(--yellow);
+  border-radius: 25%;
+}
+.productDescriptionMenu .buttonA {
+  width: 100%;
+  background-color: var(--yellow);
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.productDescriptionMenu .goBack{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: self-start;
+  padding: 0;
+  position: relative;
+  left: -10px;
+  cursor: pointer;
+}

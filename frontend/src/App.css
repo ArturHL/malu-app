@@ -1,0 +1,57 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/receta-pozole-sin-carne.jpeg");
+  background-color: var(--black);
+  object-fit: cover;
+}
+.navSize{
+  height: 90px;
+}
+.inactive{
+  display: none !important;
+}
+.redirection{
+  padding: 20px 10px 20px 10px;
+  width: 100%;
+  text-align: center;
+}
+.redirection span{
+  color: var(--yellow);
+}
+.redirection span:hover{
+  cursor: pointer;
+}
+.title{
+  font-family: var(--specialFont);
+  font-size: 40px;
+  text-decoration: underline var(--yellow);
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+.logo{
+  width: 230px;
+  height: auto;
+}
+button{
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 20px;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+}
+.buttonA{
+  background-color: var(--yellow);
+  color: var(--black);
+  border: none;
+}
+.buttonB{
+  background-color: var(--black);
+  color: white;
+  border: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}

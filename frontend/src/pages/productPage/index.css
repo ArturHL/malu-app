@@ -1,0 +1,24 @@
+.productMenuSection{
+  width: 100vw;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productMenuSection > section{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.goBack{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: self-start;
+  padding: 20px;
+}
+.goBack svg{
+  transform: rotate(270deg);
+  width: 25px;
+  height: 25px;
+  color: var(--yellow);
+}

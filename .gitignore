@@ -1,0 +1,70 @@
+# Ignorar entornos y secretos
+.env
+.env.*
+!*.env.example
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos generados por builds
+build/
+dist/
+.gradle/
+out/
+bin/
+tmp/
+.cache/
+**/target/
+
+# IntelliJ, Eclipse, STS
+*.iml
+.idea/
+.project
+.classpath
+.factorypath
+.settings/
+.sts4-cache/
+.springBeans
+.apt_generated
+
+# VSCode
+.vscode/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Docker
+**/db_data/
+docker-volumes/
+
+# Nginx cache (si existiera)
+nginx/cache/
+nginx/logs/
+
+# Node.js y Vite
+node_modules/
+frontend/node_modules/
+dashboard/node_modules/
+*.tsbuildinfo
+
+# Compilados de frontend
+frontend/dist/
+dashboard/dist/
+
+# Archivos de cobertura de tests
+coverage/
+*.lcov
+
+# JARs y dependencias
+*.jar
+*.war
+*.ear
+
+# Otros
+HELP.md
+

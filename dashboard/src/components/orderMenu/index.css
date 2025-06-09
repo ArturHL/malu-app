@@ -1,0 +1,71 @@
+.orderMenu{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+}
+.orderMenu > div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  align-items: center;
+}
+.orderMenu > div > div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.orderMenu > div > button{
+  width: 40%;
+  height: 50px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+.orderMenu > div > div > p{
+  font-size: 22px;
+  font-weight: 700;
+}
+.orderMenu > div > div > svg{
+  width: 45px;
+  height: 45px;
+}
+
+/* Products */
+.productsMenu{
+  position: absolute;
+  top: -30px;
+  background-color: white;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.productsMenu p svg{
+  width: 20px;
+  height: 20px;
+  color: var(--yellow);
+  transform: rotate(0);
+  margin-right: 5px;
+}
+.productsMenu > svg {
+  width: 30px;
+  height: 30px;
+}
+.orderMenu2{
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+}
+.iconDropMenu{
+  transition: all 0.3s ease-in-out;
+}

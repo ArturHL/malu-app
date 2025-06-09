@@ -1,0 +1,134 @@
+.principalSection {
+  position: relative;
+  width: 100vw;
+  height: 91vh;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.principalSection h1{
+  color: white;
+  opacity: 1;
+  z-index: 20; 
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: underline #fcc929;
+}
+.principalSection p{
+  color: white;
+  opacity: 1;
+  z-index: 20; 
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 10px 0 10px;
+  max-width: 600px;
+}
+.principalSection::after {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("/receta-pozole-sin-carne.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slider */
+.promoSlider{
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+.promoContainer{
+  width: 100vw;
+  min-height: 300px;
+  height: 50vw;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+.promoContainer img{
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+/* Menu Section */
+.menuSection{
+  width: 100vw;
+  height: auto;
+  text-align: center;
+}
+.menuSection .menuContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .menuSection .menuContainer{
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1960px) {
+  .menuSection .menuContainer {
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: center;
+  }
+}
+
+/* Reviews Section */
+.reviewsSection{
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+.reviewsContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.reviewsSection .review{
+  width: 100%;
+  max-width: 360px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.reviewsSection .review svg{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* location Section */
+
+.locationSection{
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
