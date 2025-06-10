@@ -18,6 +18,7 @@ public interface UserMapper {
         @Mapping(target = "email", source = "correo"),
         @Mapping(target = "phone", source = "telefono"),
         @Mapping(target = "password", source = "contrasena"),
+        @Mapping(target = "role", source = "rol.nombre")
     })
     UserDTO toUserDTO(Usuario usuario);
     List<UserDTO> toUsersDTOs(List<Usuario> Usuarios);
@@ -28,6 +29,7 @@ public interface UserMapper {
         @Mapping(target = "correo", source = "email"),
         @Mapping(target = "telefono", source = "phone"),
         @Mapping(target = "contrasena", source = "password"),
+        @Mapping(target = "rol", ignore = true),
     })
     @InheritInverseConfiguration
     Usuario toUsuario(UserDTO userDTO);

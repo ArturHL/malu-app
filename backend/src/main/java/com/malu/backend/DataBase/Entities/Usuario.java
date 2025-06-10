@@ -44,7 +44,7 @@ public class Usuario {
   private List<Orden> ordenes;
 
   @ManyToOne
-  @JoinColumn(name = "id_rol") // FK hacia Rol
+  @JoinColumn(name = "id_rol")
   private Rol rol;
 
   // Getters

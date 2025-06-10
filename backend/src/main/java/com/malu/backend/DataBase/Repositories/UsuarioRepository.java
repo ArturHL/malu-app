@@ -1,6 +1,7 @@
 package com.malu.backend.DataBase.Repositories;
 
 import com.malu.backend.DataBase.CRUD.UsuarioCRUD;
+import com.malu.backend.DataBase.Entities.Rol;
 import com.malu.backend.DataBase.Entities.Usuario;
 import com.malu.backend.Domain.Repositories.UserRepo;
 import com.malu.backend.Domain.DTO.UserDTO;
@@ -18,6 +19,8 @@ public class UsuarioRepository implements UserRepo{
   private UsuarioCRUD usuarioCRUD;
   @Autowired
   private UserMapper mapper;
+  @Autowired
+  private RolRepository rolRepository;
 
   @Override
   public Optional<List<UserDTO>> getAll() {
@@ -37,6 +40,10 @@ public class UsuarioRepository implements UserRepo{
   @Override
   public UserDTO save(UserDTO userDTO) {
     Usuario usuario = mapper.toUsuario(userDTO);
+    if (usuario.getRol() == null) {
+      Rol rolCliente = rolRepository.findByNombre("CLIENTE");
+      usuario.setRol(rolCliente);
+    }
     return mapper.toUserDTO(usuarioCRUD.save(usuario));
   }
 
