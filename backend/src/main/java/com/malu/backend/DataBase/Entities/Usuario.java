@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
@@ -41,6 +43,10 @@ public class Usuario {
   @OneToMany(mappedBy = "usuarioOrden")
   private List<Orden> ordenes;
 
+  @ManyToOne
+  @JoinColumn(name = "id_rol") // FK hacia Rol
+  private Rol rol;
+
   // Getters
   public Integer getIdUsuarios() {
     return idUsuarios;
@@ -62,6 +68,10 @@ public class Usuario {
     return contrasena;
   }
 
+  public Rol getRol() {
+    return rol;
+  }
+
   // Setters
   public void setIdUsuarios(Integer idUsuarios) {
     this.idUsuarios = idUsuarios;
@@ -81,6 +91,10 @@ public class Usuario {
 
   public void setContrasena(String contrasena) {
     this.contrasena = contrasena;
+  }
+
+  public void setRol(Rol rol) {
+    this.rol = rol;
   }
 
 }
