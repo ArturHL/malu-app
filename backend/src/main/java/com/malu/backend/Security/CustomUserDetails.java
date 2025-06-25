@@ -28,7 +28,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getEmail(); // Spring Security usa esto para identificar al usuario
+        return user.getEmail();
     }
 
     @Override
@@ -45,5 +45,9 @@ public class CustomUserDetails implements UserDetails {
 
     public UserDTO getUser() {
         return user;
+    }
+
+    public Integer getId() {
+        return user.getId();
     }
 } 

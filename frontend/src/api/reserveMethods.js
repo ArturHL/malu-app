@@ -1,51 +1,67 @@
 const url = '/api/booking';
 
-// Function to get reservations by user ID
+// 📦 Recomendación: mover estas funciones a authUtils.js para uso global
+function getAuthToken() {
+  return localStorage.getItem("auth");
+}
+
+function authHeaders(extraHeaders = {}) {
+  const token = getAuthToken();
+  return {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`,
+    ...extraHeaders,
+  };
+}
+
+// Obtener reservaciones por ID de usuario
 async function getReservationsByUserId(userId) {
   try {
-    const response = await fetch(`${url}/user/${userId}`);
-    const data = await response.json();
-    return data;
+    const response = await fetch(`${url}/user/${userId}`, {
+      headers: authHeaders(),
+    });
+    if (!response.ok) throw new Error("Error al obtener reservas");
+    return await response.json();
   } catch (error) {
     console.error('Error:', error);
-    throw error;
+    return null;
   }
 }
 
-// Function to save a new reservation
+// Guardar nueva reservación
 async function saveReservation(reservation) {
   try {
     const response = await fetch(`${url}/save`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(reservation)
+      headers: authHeaders(),
+      body: JSON.stringify(reservation),
     });
-    const data = await response.json();
-    return data;
+    if (!response.ok) throw new Error("Error al guardar reserva");
+    return await response.json();
   } catch (error) {
     console.error('Error:', error);
-    throw error;
+    return null;
   }
 }
 
-// Function to update a reservation by ID
+// Actualizar reservación por ID
 async function updateReservationById(reservationId, updatedReservation) {
   try {
     const response = await fetch(`${url}/${reservationId}`, {
       method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(updatedReservation)
+      headers: authHeaders(),
+      body: JSON.stringify(updatedReservation),
     });
-    const data = await response.json();
-    return data;
+    if (!response.ok) throw new Error("Error al actualizar reserva");
+    return await response.json();
   } catch (error) {
     console.error('Error:', error);
-    throw error;
+    return null;
   }
 }
 
-export { getReservationsByUserId, saveReservation, updateReservationById };
+export {
+  getReservationsByUserId,
+  saveReservation,
+  updateReservationById
+};

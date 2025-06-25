@@ -18,7 +18,7 @@ public class RolSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         seedRol("ADMIN");
-        seedRol("CLIENTE");
+        seedRol("USER");
     }
 
     private void seedRol(String nombre) {

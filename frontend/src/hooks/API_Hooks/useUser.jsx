@@ -4,6 +4,7 @@ import { getAllAddressesByUser, createAddress, deleteAddress} from '../../api/ad
 import { getOrderByUserId, saveOrder, updateStatusById } from '../../api/orders/orderMethods';
 import { getReservationsByUserId, saveReservation, updateReservationById } from '../../api/reserveMethods';
 import { getImgByUserId, saveNewImage } from '../../api/imagesMethods';
+import { login } from '../../api/loginMethods';
 
 export default function useUser() {
   const [userDB, setUserDB] = useState(null);
@@ -16,16 +17,18 @@ export default function useUser() {
 
   async function logIn(email, password) {
     setIsLoading(true);
-    const user = await getUserByEmail(email);
-    setIsLoading(false);
-    if (!user || !user.password) {
-      return null;
+    const authToken = await login(email, password);
+    if (!authToken) {
+      return null
+    } else {
+      localStorage.setItem("auth", authToken.token)
     }
-    if (user.password === password) {
+    const user = await getUserByEmail(email);
+    if (!user){
+      return null
+    } else {
       setUserDB(user);
       return user;
-    } else {
-      return null;
     }
   }
 
